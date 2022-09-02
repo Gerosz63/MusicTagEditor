@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="Music Editor" Height="450" Width="800"
         WindowStyle="ThreeDBorderWindow">
-    
+    <Window.Resources>
+        
+    </Window.Resources>
     <Grid x:Name="MainContainer">
-        <Frame Source="/MainMenu.xaml"></Frame>
+        <Frame Name="frmMainContent"
+         DataContext="MyPageInformation"
+         Source="{Binding}"
+         NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

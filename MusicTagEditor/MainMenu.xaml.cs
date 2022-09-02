@@ -24,5 +24,28 @@ namespace MusicTagEditor
         {
             InitializeComponent();
         }
+
+        private void Download_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Download.xaml", UriKind.Relative));
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Edit.xaml", UriKind.Relative));
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Settings.xaml", UriKind.Relative));
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

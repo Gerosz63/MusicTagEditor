@@ -16,14 +16,18 @@ using System.Windows.Shapes;
 namespace MusicTagEditor
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Edit.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Edit : Page
     {
-        public MainWindow()
+        public Edit()
         {
             InitializeComponent();
-            frmMainContent.Source = new Uri("MainMenu.xaml", UriKind.Relative);
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("MainMenu.xaml", UriKind.Relative));
         }
     }
 }
